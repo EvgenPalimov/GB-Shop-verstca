@@ -203,7 +203,7 @@ body {
 .menu-list-close-btn:active::after{
     background: #535353;
 }
-.menu-list-title {
+.menu-list span {
     display: block;
     margin: 9px 0 24px 0;
     font-weight: bold;
