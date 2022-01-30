@@ -802,8 +802,6 @@ body {
     display: block;
     width: 100%;
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
     line-height: 28.8px;
     color: #F16D7F;
     padding-left: 8px;
@@ -818,6 +816,10 @@ body {
 }
 .breadcrumb li {
     display: inline;
+}
+.breadcrumb li:last-child {
+    pointer-events: none;
+    cursor: default;
 }
 .breadcrump-link-style {
     font-weight: 300;
@@ -886,7 +888,7 @@ body {
     display: none;
     width: 232px;
     min-height: 764px;
-    padding: 16px 33px;
+    padding: 16px 17px;
     box-sizing: border-box;
     background-color: #fff;
     list-style: none;
@@ -952,7 +954,7 @@ body {
     background-color: #F16D7F;
     position: absolute;
     margin-top: 3px;
-    left: 28px;
+    left: 12px;
 }
 .filter-list-item>a {
     width: 100%;
