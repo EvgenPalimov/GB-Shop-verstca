@@ -268,14 +268,33 @@ body {
 
 /*Корзина*/
 
-.cart-btn svg {
+.cart-btn-link {
+    display: block;
     width: 32px;
     height: 29px;
+    text-decoration: none;
+    position: relative;
 }
-.cart-btn:hover svg {
+.cart-btn-link svg {
+    fill: #FFFFFF;
+}
+.cart-btn-link span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    width: 19px;
+    height: 19px;
+    background: #F16D7F;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    right: -9px;
+}
+.cart-btn-link:hover svg {
     fill: orange
 }
-.cart-btn:active svg {
+.cart-btn-link:active svg {
     fill: red;
 }
 
