@@ -297,6 +297,14 @@ body {
 .cart-btn-link:active svg {
     fill: red;
 }
+.cart-btn-link:hover span {
+    color: orange;
+    background-color: #FFFFFF;
+}
+.cart-btn-link:active span {
+    color: red;
+    background-color: #FFFFFF;
+}
 
 /* Блок main*/ 
 /* Баннер*/
