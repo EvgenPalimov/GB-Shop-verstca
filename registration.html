@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Корзина</title>
+    <title>Регистрация</title>
 </head>
 
 <body>
@@ -119,86 +119,59 @@
         </header>
         <main>
             <div class="page-header-bask-banner  padding-site">
-                <h2 class="page-header-bask-banner-txt">shopping cart</h2>
+                <h2 class="page-header-bask-banner-txt">registration</h2>
             </div>
-            <section class="page-basket-products-wrp padding-site">
-                <div class="basket-products-wrp">
-                    <article class="basket-product-item">
-                        <div class="basket-products-item-photo-wrp">
-                            <img class="basket-products-item-photo" src="img/index_products_img_3.jpg"
-                                alt="product description">
-                        </div>
-                        <div class="basket-products-item-txt-wrp">
-                            <h1 class="basket-products-item-title">mango people <br>t-shirt</h1>
-                            <div class="basket-products-item-txt">
-                                <span id="basket-product-price">Price:
-                                    <span id="basket-product-dollar">$300</span>
-                                </span>
-                                <span>Color: Red</span>
-                                <span>Size: XI</span>
-                                <span id="basket-product-quantity">Quantity:
-                                    <span id="basket-product-quantity-number">2</span>
-                                </span>
-                            </div>
-                        </div>
-                        <button class="basket-products-item-close">
-                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+            <div class="registr-wrp padding-site">
+                <section>
+                    <form action="#" method="post">
+                        <fieldset class="registr-form">
+                            <legend class="registr-form-legend">Your Name</legend>
+                            <input class="registr-form-input" type="text" placeholder="First Name">
+                            <input class="registr-form-input" type="text" placeholder="Last Name">
+                        </fieldset>
+                        <fieldset class="registr-form">
+                            <input class="form-radio" type="radio" name="registr-form-radio" id="registr-male">
+                            <label for="registr-male">Male</label>
+                            <input class="form-radio" type="radio" name="registr-form-radio" id="registr-female">
+                            <label for="registr-female">Female</label>
+                        </fieldset>
+                        <fieldset class="registr-form">
+                            <legend class="registr-form-legend">Login details</legend>
+                            <input id="idas" class="registr-form-input" type="email" placeholder="Email">
+                            <input class="registr-form-input" type="password" placeholder="Password">
+                            <p class="registr-form-txt">Please use 8&nbsp;or more characters, with at&nbsp;least
+                                1&nbsp;number and a&nbsp;mixture
+                                of&nbsp;uppercase and lowercase letters</p>
+                        </fieldset>
+                        <button class="registr-form-btn">
+                            <svg width="17" height="10" viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" />
                             </svg>
+                            <span>join now</span>
                         </button>
-                    </article>
-                    <article class="basket-product-item">
-                        <div class="basket-products-item-photo-wrp">
-                            <img class="basket-products-item-photo" src="img/catalog_product_2.jpg"
-                                alt="product description">
-                        </div>
-                        <div class="basket-products-item-txt-wrp">
-                            <h1 class="basket-products-item-title">mango people <br>t-shirt</h1>
-                            <div class="basket-products-item-txt">
-                                <span id="basket-product-price-1">Price:
-                                    <span id="basket-product-dollar-1">$300</span>
-                                </span>
-                                <span>Color: Red</span>
-                                <span>Size: XI</span>
-                                <span id="basket-product-quantity-1">Quantity:
-                                    <span id="basket-product-quantity-number-1">2</span>
-                                </span>
-                            </div>
-                        </div>
-                        <button class="basket-products-item-close">
-                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
-                            </svg>
-                        </button>
-                    </article>
-                    <div class="basket-products-btn">
-                        <input type="reset" value="clear shopping cart">
-                        <input type="submit" value="continue shopping">
-                    </div>
-                </div>
-                <form class="basket-form" action="#" method="post">
-                    <fieldset class="basket-form-adress">
-                        <legend>shipping adress</legend>
-                        <input id="bangladesh" type="text" placeholder="Bangladesh" required>
-                        <input type="text" placeholder="State" required>
-                        <input type="text" placeholder="Postcode / Zip" required>
-                        <input id="get-a-quote" type="submit" value="GET A QUOTE">
-                    </fieldset>
-                    <div class="basket-form-total">
-                        <div class="basket-form-txt-total">
-                            <span class="basket-form-sub-total-txt">sub total
-                                <span id="basket-forn-sub-total-dol">$900</span>
-                            </span>
-                            <span id="basket-form-grand-total-txt">grand total
-                                <span id="basket-form-grand-total-dol">$900</span>
-                            </span>
-                        </div>
-                        <button class="basket-form-total-btn">proceed to checkout</button>
-                    </div>
-                </form>
-            </section>
+                    </form>
+                </section>
+                <aside class="registr-info">
+                    <h2 class="registr-info-title">
+                        loyalty has its perks
+                    </h2>
+                    <p class="registr-info-txt">
+                        Get in&nbsp;on&nbsp;the loyalty program where you can earn points and unlock serious perks.
+                        Starting
+                        with these as&nbsp;soon as&nbsp;you join:
+                    </p>
+                    <ul>
+                        <li class="registr-info-txt">15% off welcome offer</li>
+                        <li class="registr-info-txt">Free shipping, returns and exchanges on all orders</li>
+                        <li class="registr-info-txt">$10 off a purchase on your birthday</li>
+                        <li class="registr-info-txt">Early access to products</li>
+                        <li class="registr-info-txt">Exclusive offers & rewards</li>
+                    </ul>
+                </aside>
+            </div>
         </main>
         <section class="subscribe subscribe-margin">
             <div class="subscribe-info ">

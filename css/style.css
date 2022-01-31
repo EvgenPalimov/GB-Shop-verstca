@@ -70,7 +70,7 @@ body {
     background-image: url('https://findicons.com/files/icons/2813/flat_jewels/512/search.png');
 }
 .search-icon-form__label:hover .search-icon-form__svg {
-    fill: gold;
+    fill: orange;
 }
 .search-icon-form__label:active .search-icon-form__svg {
     fill: green;
@@ -103,7 +103,7 @@ body {
     border: 2px solid #fff;
 }
 .search-icon-form__input:focus ~ .search-icon-form__label>.search-icon-form__svg {
-    fill: aqua;
+    fill: #F16D7F;
 }
 
 /*Второй блок кнопок*/ 
@@ -255,14 +255,16 @@ body {
 
 /*Аккаунт*/
 
-.account-btn svg {
+.account-btn-link svg {
+    display: block;
     width: 29px;
     height: 29px;
+    text-decoration: none;
 }
-.account-btn:hover svg {
+.account-btn-link:hover svg {
     fill: orange;
 }
-.account-btn:active svg {
+.account-btn-link:active svg {
     fill: red;
 }
 
@@ -569,8 +571,7 @@ body {
 }
 .products-btn {
     display: block;
-    width: 211px;
-    padding: 14.5px;
+    padding: 15px 39px;
     background-color: #fff;
     border: 2px solid #F26376;
     box-sizing: border-box;
@@ -582,16 +583,17 @@ body {
     text-align: center;
     word-break: break-all;
     margin: 0 50px;
+    text-decoration: none;
 } 
 .products-btn:hover {
-    background-color: #fff;
-    border: 2px solid #000;
-    color: #000;
+    background-color: #F26376;
+    border: 2px solid #fff;
+    color: #fff;
 }
 .products-btn:active {
-    background-color: #fff;
-    border: 2px solid #F26376;
-    color: #F26376;
+    background-color: #F26376;
+    border: 2px solid #fff;
+    color: #fff;
 }
 
 /*Блок особенности*/
@@ -972,6 +974,7 @@ body {
     font-size: 14px;
     line-height: 17px;
     font-weight: normal;
+    text-decoration: none;
 }
 .filter-list-item::before {
     content: "";
@@ -1301,23 +1304,23 @@ nav[role="navigation"] {
 }
 .product-cart-btn svg:hover,
 .product-cart-btn:hover{
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000;
-    fill: #000;
+    background-color: #F26376;
+    border: 1px solid #fff;
+    color: #fff;
+    fill: #fff;
 }
 .product-cart-btn svg:active,
 .product-cart-btn:active {
     background-color: #fff;
-    border: 1px solid #F26376;
-    color: #F26376;
-    fill: #F26376;
+    border: 1px solid #fff;
+    color: #fff;
+    fill: #fff;
 }
 .product-cart-btn:hover svg {
-    fill: #222;
+    fill: #fff;
 }
 .product-cart-btn:active svg {
-    fill: #F26376;
+    fill: #fff;
 }
 .products-cart-margin {
     margin-top: 128px;
@@ -1425,6 +1428,16 @@ nav[role="navigation"] {
     background-color: #FFFFFF;
     text-transform: uppercase;
 }
+.basket-products-btn input:hover{
+    background-color: #A4A4A4;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+.basket-products-btn input:active {
+    background-color: #A4A4A4;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
 .basket-form-adress {
     min-width: 360px;
     border: none;
@@ -1438,7 +1451,6 @@ nav[role="navigation"] {
     margin-bottom: 20px;
     text-indent: 5px;
     text-indent: 17px;
-
     padding: 0;
     border: 0;
     outline: 1px solid #A4A4A4;
@@ -1519,22 +1531,206 @@ nav[role="navigation"] {
 }
 .basket-form-total-btn{
     display: block;
-    width: 273px;
-    height: 50px;
+    padding: 15px 42px;
     background-color: #F26376;
     box-sizing: border-box;
     color: #FFFFFF;
     font-style: normal;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
     font-weight: 300;
     word-break: break-all;
     text-transform: uppercase;
     border-width: 0;
 }
+.basket-form-total-btn:hover{
+    background-color: #fff;
+    outline: 1px solid #F16D7F;
+    color: #F16D7F;
+}
+.basket-form-total-btn:active {
+    background-color: #fff;
+    outline: 1px solid #F26376;
+    color: #F26376;
+}
 #basket-form-grand-total-txt {
     display: block;
 }
+
+/* Регистрация */
+/* Form */
+
+.registr-wrp {
+    display: flex;
+    justify-content: space-between;
+}
+.registr-form {
+    min-width: 360px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.registr-form-legend {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+.registr-form-input{
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    text-indent: 5px;
+    text-indent: 17px;
+    padding: 0;
+    border: 0;
+    outline: 1px solid #A4A4A4;
+}
+.registr-form:first-child {
+    margin-bottom: 11px;
+}
+.registr-form:nth-child(3) {
+    margin-top: 33px;
+}
+.form-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.form-radio + label {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    padding-right: 21px ;
+}
+.form-radio + label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.form-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #ffb3d9;
+}
+.form-radio:not(:disabled):active+label::before {
+    background-color: #ffb3d0;
+    border-color: #ffb3dd;
+} 
+.form-radio:focus:not(:checked)+label::before {
+    border-color: #ff80b1;
+}
+.form-radio:checked+label::before {
+    border-color: #e6779c;
+    background-color: #F16D7F;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-radio:disabled+label::before {
+    background-color: #eee9ef;
+}
+.registr-form-input::-webkit-input-placeholder {
+    color: #B1B1B1;
+}
+.registr-form-input::-moz-placeholder {
+    color: #B1B1B1;
+}
+.registr-form-input:-moz-placeholder {
+    color: #B1B1B1;
+}
+.registr-form-input:-ms-input-placeholder {
+    color: #B1B1B1;
+}
+.registr-form-txt {
+    display: block;
+    width: 359px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+}
+.registr-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 29px;
+    background-color: #F16D7F;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    color: #fff;
+    font-style: normal;
+    line-height: 17px;
+    word-break: break-all;
+    text-transform: uppercase;
+    margin-top: 39px;
+}
+.registr-form-btn svg {
+    fill: #fff;
+    margin-left: 20px;
+    order: 2;
+}
+.registr-form-btn svg:hover,
+.registr-form-btn:hover{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #F16D7F;
+    fill: #F16D7F;
+}
+.registr-form-btn svg:active,
+.registr-form-btn:active {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #F26376;
+    fill: #F26376;
+}
+.registr-form-btn:hover svg {
+    fill: #F16D7F;
+}
+.registr-form-btn:active svg {
+    fill: #F26376;
+}
+.products-cart-margin {
+    margin-top: 128px;
+}
+.registr-info {
+    max-width: 652px;
+}
+.registr-info-title {
+    margin: 0;
+    margin-bottom: 22px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.registr-info-txt {
+    margin: 0;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.registr-info p {
+    margin-bottom: 22px;
+}
+.registr-info ul {
+    list-style-image: url("../img/registration_ul_img.svg");
+}
+
 .padding-site {
     padding-left: 14.375%;
     padding-right: 14.375%;
@@ -1690,10 +1886,34 @@ nav[role="navigation"] {
     .basket-products-btn {
         justify-content: space-evenly;
     }
+
+    /* Register */ 
+
+    .registr-wrp {
+        padding: 0 16px;
+    }
+    .registr-info {
+        padding-left: 22px;
+    }
+    .registr-info-title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 32px;
+    }
+    .registr-info-txt {
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 
 @media (max-width: 675px) {
 
+    .account-btn-link {
+        display: none;
+    }
+    .cart-btn-link {
+        display: none;
+    }
     .page-header-wrp-btn {
         margin: 0 16px;
     }
@@ -1918,6 +2138,17 @@ nav[role="navigation"] {
     }
     .subscribe-margin {
         margin-top: 96px;
+    }
+
+    /* Registration */
+
+    .registr-wrp {
+        padding: 0 8px;
+        flex-direction: column;
+    }
+    .registr-info {
+        padding-left: 0;
+        margin-top: 40px;
     }
 }
 
