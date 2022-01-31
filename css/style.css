@@ -1328,14 +1328,14 @@ nav[role="navigation"] {
 
 /* Cart */
 
-.page-header-bask-banner {
+.page-basket-banner {
     align-items: center;
     display: flex;
     min-height: 148px;
     background-color: #F8F3F4;
     margin-bottom: 96px;
 }
-.page-header-bask-banner-txt {
+.page-basket-banner-txt {
     display: block;
     font-style: normal;
     font-weight: 400;
