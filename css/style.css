@@ -879,8 +879,8 @@ body {
 .filter-button-wrp {
     width: 75px;
     position: relative;
-    top: 0;
-    left: -431px;
+    top: 9px;
+    left: -430px;
 }
 .filter-btn {
     display: flex;
@@ -894,6 +894,12 @@ body {
     margin-right: 10px;
     text-transform: uppercase;
 }
+/* .filter-btn:hover {
+    color: #F16D7F;
+}
+.filter-btn:hover > svg {
+    fill: #F16D7F;
+} */
 .filter-list-btn {
     justify-content: flex-start;
 }
@@ -905,7 +911,7 @@ body {
     color: #F16D7F;
 }
 .filter-list-btn svg {
-    margin-left: -19px;
+    margin-left: -38px;
     fill: #F16D7F;
 }
 #filter-switch {
@@ -937,7 +943,7 @@ body {
 }
 .filter-list {
     display: none;
-    width: 232px;
+    min-width: 360px;
     padding: 0 17px;
     box-sizing: border-box;
     background-color: #FFFFFF;
@@ -1051,6 +1057,7 @@ body {
 .list-filter-form-btn-title:active svg {
     fill: currentColor;
 }
+
 #switch {
     display: none;
 }
@@ -1060,16 +1067,39 @@ body {
 #switch-2 {
     display: none;
 }
-#switch-1:checked ~ .list-filter-form-wrp {
+#switch:checked ~ .list-filter-form-trending {
     display: flex;
 }
-.list-filter-form-wrp {
+#switch-1:checked ~ .list-filter-form-size {
+    display: flex;
+}
+#switch-2:checked ~ .list-filter-form-size {
+    display: flex;
+}
+.list-filter-form-size {
     display: none;
     flex-direction: column;
     margin: 5px 0 0 0;
     padding: 9.5px 9.5px 9.5px 31px;
     box-sizing: border-box;
     background-color: #fff;
+    box-shadow: 6px 4px 35px 0 rgb(0 0 0 / 21%);
+}
+.list-filter-form-trending {
+    display: none;
+    order: 1;
+    background-color: #FFFFFF;
+    margin: 5px 0 0 0;
+}
+.list-filter-form-trending ul {
+    margin: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding: 5px 10px 0 10px;
+    width: 80%;
+    z-index: 2;
+    box-shadow: 6px 4px 35px 0 rgb(0 0 0 / 21%);
+    list-style-type: none;
 }
 .list-filter-form-item {
     display: none;
@@ -1093,8 +1123,9 @@ body {
     font-size: 14px;
     line-height: 16.41px;
     color: #6F6E6E;
+    text-decoration: none;
 }
-.list-filter-form-item-title:before {
+.list-filter-form-size > .list-filter-form-item-title:before {
     content: "";
     display: block;
     width: 12px;
