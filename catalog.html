@@ -143,9 +143,21 @@
                     </label>
                     <input id="filter-switch" type="checkbox">
                     <ul class="filter-list">
-                        <a href="#" class="filter-list-close-btn"></a>
+                        <li>
+                            <label class="filter-btn filter-list-btn" for="filter-switch">
+                                <span>Filter</span>
+                                <svg width="30%" height="30%" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M.833 10h3.334A.836.836 0 0 0 5 9.167a.836.836 0 0 0-.833-.834H.833A.836.836 0 0 0 0 9.167c0 .458.375.833.833.833ZM0 .833c0 .459.375.834.833.834h13.334A.836.836 0 0 0 15 .833.836.836 0 0 0 14.167 0H.833A.836.836 0 0 0 0 .833Zm.833 5h8.334A.836.836 0 0 0 10 5a.836.836 0 0 0-.833-.833H.833A.836.836 0 0 0 0 5c0 .458.375.833.833.833Z" />
+                                </svg>
+                            </label>
+                        </li>
+
                         <li class="filter-list-item">
-                            <a href="#">CATEGORY</a>
+                            <label for="filter-switch-1">
+                                <span class="filter-list-categories">category</span>
+                            </label>
+                            <input id="filter-switch-1" type="checkbox">
                             <ul class="filter-sublist">
                                 <li class="filter-sublist-item">
                                     <a href="#">Accessories</a>
@@ -183,17 +195,52 @@
                             </ul>
                         </li>
                         <li class="filter-list-item">
-                            <a href="#">BRAND</a>
+                            <label for="filter-switch-2">
+                                <span class="filter-list-categories">brand</span>
+                            </label>
+                            <input id="filter-switch-2" type="checkbox">
                             <ul class="filter-sublist">
+                                <li class="filter-sublist-item">
+                                    <a href="#">Addidas</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Nike</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Fila</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Zara</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">BOOS</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="filter-list-item">
-                            <a href="#">DESIGNER</a>
+                            <label for="filter-switch-3">
+                                <span class="filter-list-categories">designer</span>
+                            </label>
+                            <input id="filter-switch-3" type="checkbox">
                             <ul class="filter-sublist">
+                                <li class="filter-sublist-item">
+                                    <a href="#">Coco Chanel</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Donna Karan</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Giorgio Armani</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Calvin Klein</a>
+                                </li>
+                                <li class="filter-sublist-item">
+                                    <a href="#">Donatella Versace</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
-
                 </div>
                 <div class="filter-product">
                     <form class="list-filter-form">
