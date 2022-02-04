@@ -953,7 +953,7 @@ body {
     top: -14px;
     margin-left: -17px;
     z-index: 20;
-    box-shadow: 6px 4px 35px 0 rgb(0 0 0 / 21%)
+    box-shadow: 6px 4px 35px 0 rgb(0 0 0 / 21%);
 }
 .filter-list-title {
     display: block;
@@ -999,7 +999,6 @@ body {
 }
 .filter-sublist-item>a {
     display: block;
-    height: 100%;
     margin: 0 0 11px 0;
     color: #6F6E6E;
 }
@@ -1162,7 +1161,8 @@ nav[role="navigation"] {
 .li-indent {
       margin: 0 -5px;
 }
-.cd-pagination a, .cd-pagination span {
+.cd-pagination a, 
+.cd-pagination span {
     display: inline-block;
     -webkit-user-select: none;
     -moz-user-select: none;
