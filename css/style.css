@@ -117,7 +117,7 @@ body {
     align-items: center;
     width: 32px;
     height: 32px;
-    transition: transform 400ms ease;
+    transition: transform 500ms ease;
 }
 .menu-btn:hover span,
 .menu-btn:hover span::before,
@@ -151,13 +151,14 @@ body {
     top: 10px;
 }
 .menu-btn:hover {
-    transform: rotate(-360deg) scale(1.3) ;
+    transform: scale(1.3) ;
 }
 #menu-switch {
     display: none;
 }
 #menu-switch:checked ~ .menu-list {
     display: block;
+    animation: anim-menu-list ease-out 1.5s ;
 }
 #menu-switch:checked ~ .page-header-banner {
     border: 8px solid red;
@@ -175,6 +176,14 @@ body {
     margin-left: -60px;
     z-index: 20;
 }
+@keyframes anim-menu-list {
+    from {
+      margin: 14px 0 0 -2000px;
+    }
+    to {
+      margin: 14px 0 0 -60px;
+    }
+  }
 .menu-list-close-btn {
     display: block;
     width: 12px;
@@ -395,7 +404,6 @@ body {
     margin: 0 30px 30px 0;
     background-size: cover;
     background-position: center;
-    transition: transform 400ms ease;
 }
 .categories-item:nth-child(1):hover {
     background-image: linear-gradient(rgba(33, 22, 22, .1), rgba(33, 22, 22, .1)), 
@@ -434,9 +442,6 @@ body {
 .categories-item:nth-child(4n-1),
 .categories-item:last-child {
     margin: 0 0 30px;
-}
-.categories-item:hover {
-    transform: scale(1.2);
 }
 .categories-item-title, 
 .categories-item-subtitle{
@@ -1222,14 +1227,6 @@ nav[role="navigation"] {
     color: #C4C4C4;
     transition: transform 300ms ease;
 }
-.cd-pagination a:active {
-    /* click effect */
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9);
-}
 .cd-pagination .button:first-of-type a::before {
     content: '\003C';
     color: #222222;
@@ -1418,12 +1415,18 @@ nav[role="navigation"] {
 }
 .page-basket-products-wrp {
     display: flex;
-    justify-content: space-between;
 }
-
+.basket-products-wrp {
+    max-width: 652px;
+    width: 100%;
+    margin-right: 128px;
+}
+.basket-form {
+    max-width: 360px;
+    width: 100%;
+}
 .basket-products-item-txt-wrp {
-    padding: 22px 97px 22px 31px;
-    min-width: 262px;
+    padding: 22px 0 0 31px;
 }
 .basket-products-item-title {
     display: block;
@@ -1445,7 +1448,7 @@ nav[role="navigation"] {
     transition: transform 400ms ease;
 }
 .basket-product-item:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .basket-product-item span {
     display: block;
@@ -1514,7 +1517,6 @@ nav[role="navigation"] {
     color: #FFFFFF;
 }
 .basket-form-adress {
-    min-width: 360px;
     border: none;
     padding: 0;
     margin: 17px 0 57px 0;
@@ -1562,7 +1564,7 @@ nav[role="navigation"] {
 }
 .basket-form-total {
     background-color: #F5F3F3;
-    width: 273px;
+
     height: 128px;
     padding: 42px 43px;
     display: flex;
@@ -1821,6 +1823,18 @@ nav[role="navigation"] {
         overflow: hidden;
         width: 100%;
     }
+    .page-header-logo img:hover {
+        transform: none;
+    }
+    .search-icon-form__label:hover {
+        transform: none;
+    }
+    .menu-btn:hover {
+        transform: none;
+    }
+    .basket-product-item:hover {
+        transform: none;
+    }
     .page-header {
         padding-left: 0;
         padding-right: 0;
@@ -1877,6 +1891,9 @@ nav[role="navigation"] {
     .products-item {
         margin: 16px 12px;
     }
+    .products-item:hover {
+        transform: none;
+    }
     .features {
         flex-direction: column;
     }
@@ -1915,6 +1932,11 @@ nav[role="navigation"] {
         width: 0;
         margin-left: 0;
     }
+    .cd-pagination a:hover {
+        transform: none;
+        color: #C4C4C4;
+        font-weight: none;
+    }
     .filter-button-wrp {
         top: 8px;
         left: -333px;
@@ -1941,6 +1963,10 @@ nav[role="navigation"] {
 
     /* Cart */
 
+    .basket-products-wrp {
+        margin-right: 0;
+        max-width: 100%;
+    }
     .page-header-bask-banner-txt {
         padding-left: 16px;
     }
@@ -1955,12 +1981,17 @@ nav[role="navigation"] {
         display: flex;
         justify-content: space-between;
         margin-top: 64px;
+        max-width: none;
     }
     .basket-form-total {
         margin-top: 53px;
     }
     .basket-products-btn {
         justify-content: space-evenly;
+    }
+    .basket-form-adress {
+        max-width: 360px;
+        width: 100%;
     }
 
     /* Register */ 
