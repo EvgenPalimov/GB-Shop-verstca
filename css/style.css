@@ -173,7 +173,7 @@ body {
     list-style: none;
     position: absolute;
     top: 61px;
-    margin-left: -60px;
+    margin-left: 166px;
     z-index: 20;
 }
 @keyframes anim-menu-list {
@@ -181,7 +181,7 @@ body {
       margin: 14px 0 0 -2000px;
     }
     to {
-      margin: 14px 0 0 -60px;
+      margin: 14px 0 0 166px;
     }
   }
 .menu-list-close-btn {
@@ -1417,16 +1417,16 @@ nav[role="navigation"] {
     display: flex;
 }
 .basket-products-wrp {
-    max-width: 652px;
-    width: 100%;
+    width: 652px;
     margin-right: 128px;
+    box-sizing: border-box;
 }
 .basket-form {
-    max-width: 360px;
-    width: 100%;
+    width: 360px;
+    box-sizing: border-box;
 }
 .basket-products-item-txt-wrp {
-    padding: 22px 0 0 31px;
+    padding: 22px 186px 0 31px;
 }
 .basket-products-item-title {
     display: block;
@@ -1459,7 +1459,7 @@ nav[role="navigation"] {
     margin: 5px 0;
 }
 .basket-products-item-photo {
-    max-width: 262px;
+    max-height: 306px;
 }
 #basket-product-price,
 #basket-product-price-1 {
@@ -1564,7 +1564,6 @@ nav[role="navigation"] {
 }
 .basket-form-total {
     background-color: #F5F3F3;
-
     height: 128px;
     padding: 42px 43px;
     display: flex;
@@ -1784,6 +1783,7 @@ nav[role="navigation"] {
 }
 .registr-info {
     max-width: 652px;
+    margin-left: 128px;
 }
 .registr-info-title {
     margin: 0;

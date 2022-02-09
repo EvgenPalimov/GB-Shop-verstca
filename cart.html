@@ -136,7 +136,7 @@
                                 <span>Color: Red</span>
                                 <span>Size: XI</span>
                                 <span id="basket-product-quantity">Quantity:
-                                    <input type="text" id="basket-product-quantity-number" placeholder="2">
+                                    <input type="number" id="basket-product-quantity-number" placeholder="2">
                                 </span>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                                 <span>Color: Red</span>
                                 <span>Size: XI</span>
                                 <span id="basket-product-quantity-1">Quantity:
-                                    <input type="text" id="basket-product-quantity-number-1" placeholder="2">
+                                    <input type="number" id="basket-product-quantity-number-1" placeholder="2">
                                 </span>
                             </div>
                         </div>
@@ -175,26 +175,28 @@
                         <input type="submit" value="continue shopping">
                     </div>
                 </div>
-                <form class="basket-form" action="#" method="post">
-                    <fieldset class="basket-form-adress">
-                        <legend>shipping adress</legend>
-                        <input id="bangladesh" type="text" placeholder="Bangladesh" required>
-                        <input type="text" placeholder="State" required>
-                        <input type="text" placeholder="Postcode / Zip" required>
-                        <input id="get-a-quote" type="submit" value="GET A QUOTE">
-                    </fieldset>
-                    <div class="basket-form-total">
-                        <div class="basket-form-txt-total">
-                            <span class="basket-form-sub-total-txt">sub total
-                                <span id="basket-forn-sub-total-dol">$900</span>
-                            </span>
-                            <span id="basket-form-grand-total-txt">grand total
-                                <span id="basket-form-grand-total-dol">$900</span>
-                            </span>
+                <div>
+                    <form class="basket-form" action="#" method="post">
+                        <fieldset class="basket-form-adress">
+                            <legend>shipping adress</legend>
+                            <input id="bangladesh" type="text" placeholder="Bangladesh" required>
+                            <input type="text" placeholder="State" required>
+                            <input type="text" placeholder="Postcode / Zip" required>
+                            <input id="get-a-quote" type="submit" value="GET A QUOTE">
+                        </fieldset>
+                        <div class="basket-form-total">
+                            <div class="basket-form-txt-total">
+                                <span class="basket-form-sub-total-txt">sub total
+                                    <span id="basket-forn-sub-total-dol">$900</span>
+                                </span>
+                                <span id="basket-form-grand-total-txt">grand total
+                                    <span id="basket-form-grand-total-dol">$900</span>
+                                </span>
+                            </div>
+                            <button class="basket-form-total-btn">proceed to checkout</button>
                         </div>
-                        <button class="basket-form-total-btn">proceed to checkout</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </section>
         </main>
         <section class="subscribe subscribe-margin">
