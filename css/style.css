@@ -1418,11 +1418,11 @@ nav[role="navigation"] {
 }
 .basket-products-wrp {
     width: 652px;
-    margin-right: 128px;
     box-sizing: border-box;
 }
 .basket-form {
     width: 360px;
+    margin-left: 128px;
     box-sizing: border-box;
 }
 .basket-products-item-txt-wrp {
