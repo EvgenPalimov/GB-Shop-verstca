@@ -1815,6 +1815,7 @@ nav[role="navigation"] {
 .padding-site {
     padding-left: 14.375%;
     padding-right: 14.375%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
