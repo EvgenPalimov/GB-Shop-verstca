@@ -1813,9 +1813,8 @@ nav[role="navigation"] {
 }
 
 .padding-site {
-    padding-left: 14.375%;
-    padding-right: 14.375%;
-    box-sizing: border-box;
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
 }
 
 @media (max-width: 1024px) {
