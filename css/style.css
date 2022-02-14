@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 .container{
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0 auto;
     font-family: Lato;
     font-size: 14px;
@@ -343,7 +343,7 @@ body {
     background-image: url('../img/index_header_banner_background.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom left;  
+    background-position: calc(50% - 388px);  
 }
 .page-header-banner:hover {
     filter: brightness(50%);
@@ -2004,6 +2004,7 @@ nav[role="navigation"] {
     }
     .registr-info {
         padding-left: 22px;
+        margin-left: 0;
     }
     .registr-info-title {
         font-size: 16px;
@@ -2120,8 +2121,10 @@ nav[role="navigation"] {
     }
     .filter-list {
         width: 200px;
-        min-height: 555px;
-        margin-left: -23px;
+        margin-left: -10px;
+    }
+    .filter-list-btn {
+        margin-left: 35px;
     }
     .filter-btn svg {
         width: 80%;
