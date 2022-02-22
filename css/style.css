@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Lato;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 /* Блок header*/
@@ -618,11 +619,11 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19,2px;
+    line-height: 19px;
     text-align: center;
     word-break: break-all;
-    margin: 0 50px;
     text-decoration: none;
+    margin: 0 100px;
 } 
 .products-btn:hover {
     background-color: #F26376;
@@ -1412,9 +1413,6 @@ nav[role="navigation"] {
     display: flex;
     justify-content: space-between;
 }
-.basket-products-wrp {
-    margin-right: 128px;
-}
 .basket-form {
     max-width: 360px;
     width: 100%;
@@ -1812,6 +1810,9 @@ nav[role="navigation"] {
 }
 
 @media (max-width:1140px) and (min-width: 1025px) {
+    .page-header-wrp-btn {
+        margin: 0;
+    }
     .page-header-banner {
         background-position: calc(50% - 322px);
     }
@@ -1824,6 +1825,9 @@ nav[role="navigation"] {
     .categories-item {
         width: 312px;
         height: 240px;
+    }
+    .product-item-spesial-index {
+        margin: 0 30px 30px 0;
     }
     .product-item-spesial-catalog {
         margin: 0 30px 30px 0;
@@ -1985,10 +1989,6 @@ nav[role="navigation"] {
 
     /* Cart */
 
-    .basket-products-wrp {
-        margin-right: 0;
-    }
-
     .basket-product-item {
         margin: 0 auto 40px auto;
         max-width: 734px;
@@ -2008,6 +2008,7 @@ nav[role="navigation"] {
         justify-content: space-between;
         margin-top: 64px;
         max-width: none;
+        margin-right: 10px;
     }
     .basket-form-total {
         margin-top: 53px;
@@ -2086,6 +2087,9 @@ nav[role="navigation"] {
     .categories-item:last-child {
         width: 100%;
         margin-top: 32px;  
+    }
+    .products-btn {
+        margin: 0 50px;
     }
     .page-footer {
         min-height: 143px;
