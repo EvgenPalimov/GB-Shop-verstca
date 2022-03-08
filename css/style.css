@@ -4,6 +4,7 @@
     font-family: Lato;
     font-size: 14px;
     overflow-x: hidden;
+    background-color: #FFFFFF;
 }
 
 /* Блок header*/
@@ -1160,7 +1161,6 @@
     margin: 0 0 6px 0;
     position: relative;
     text-transform: uppercase;
-    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1536,6 +1536,11 @@ nav[role="navigation"] {
     background-color: #FFFFFF;
     margin-bottom: 0;
     margin-top: 23px;
+}
+
+#get-a-quote:hover {
+    background-color: #F16D7F;
+    color: #FFFFFF
 }
 #bangladesh::-webkit-input-placeholder {
     color: #B1B1B1;
