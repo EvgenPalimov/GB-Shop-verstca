@@ -1,7 +1,12 @@
-Vue.component('search', {
+const search = {
+    data() {
+        return {
+            userSearch: '',
+        }
+    },
     template: `
-         <form action="search" class="search-icon-form" @submit.prevent="$root.filter">
-            <input class="search-icon-form__input" id="search" type="search" v-model="$root.userSearch">
+         <form action="search" class="search-icon-form" @submit.prevent="$root.$refs.products.search(userSearch)">
+            <input class="search-icon-form__input" id="search" type="text" v-model="userSearch">
             <label for="search" class="search-icon-form__label">
                     <svg class="search-icon-form__svg" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
@@ -11,4 +16,4 @@ Vue.component('search', {
             </label>
         </form>
     `
-});
+};

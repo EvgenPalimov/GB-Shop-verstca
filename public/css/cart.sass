@@ -1,0 +1,113 @@
+.catalog__header-basket-wrp
+    position: relative
+
+.catalog__header-basket-modal
+    position: absolute
+    background-color: #fff
+    padding: 10px
+    z-index: 100
+    top: 55px
+    right: -100px
+    border-radius: 15px
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.13))
+
+    &:after
+        content: ''
+        position: absolute
+        right: 95px
+        top: -40px
+        border: 20px solid transparent
+        border-bottom: 20px solid white
+
+.catalog__header-basket-modal-close
+    color: #000
+    float: right
+    font-size: 30px
+    cursor: pointer
+
+.catalog__header-basket-products
+    padding-inline-start: 0
+
+.catalog__header-basket-products-another
+    width: 200px
+    padding: 10px
+    text-align: center
+
+    & span
+        line-height: 23px
+        font-size: 20px
+        font-weight: 500
+
+.catalog__header-basket-products-item
+    text-decoration: none
+    display: flex
+    margin: 10px 0
+
+.catalog__header-basket-products-item-wrp
+    margin: 0 0 0 15px
+    min-width: 220px
+    display: flex
+    flex-direction: column
+
+.catalog__header-basket-products-item-wrp-2
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-width: 120px
+
+.catalog__header-basket-products-item-title
+    font-size: 20px
+    line-height: 33px
+    font-weight: 500
+    margin-bottom: 13px
+
+.catalog__header-basket-products-item-photo
+    width: 100px
+    height: 100px
+
+.catalog__header-basket-products-item-txt
+    margin: 7px 0
+    font-size: 15px
+    line-height: 17px
+    font-weight: 300
+
+.catalog__header-basket-products-item-btn
+    width: 60px
+    height: 40px
+    border-radius: 5px
+    background-color: black
+    border: none
+    font-size: 30px
+    line-height: 33px
+    font-weight: 400
+
+    & span
+        color: white
+
+.msgError
+    font-size: 17px
+    border: 1px solid red
+    padding: 5px
+    background-color: red
+
+.show-error
+    position: absolute
+    width: 100%
+    height: 1000%
+    background-color: rgb(253, 247, 247)
+    z-index: 10000
+    top: 0
+    right: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & span:first-child
+        margin-top: 50px
+
+    & span
+        font-size: 35px
+        line-height: 38px
+        font-weight: 500
+        margin: 20px 0
+        color: red

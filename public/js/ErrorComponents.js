@@ -1,5 +1,5 @@
-Vue.component('error', {
-    props: ['visible', 'error'],
+const error = {
+    props: ['error'],
     template: `
         <div v-if="error" class="show-error" >
             <span>Приносим свои извенения!!!</span>
@@ -7,4 +7,4 @@ Vue.component('error', {
             <span>Скоро всё починят!!!</span>
         </div>
         `
-});
+};

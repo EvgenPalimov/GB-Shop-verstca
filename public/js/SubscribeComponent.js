@@ -1,4 +1,4 @@
-Vue.component('subscribe', {
+const subscribe = {
     template: `
         <section class="subscribe">
             <div class="subscribe-info">
@@ -16,4 +16,4 @@ Vue.component('subscribe', {
                 </form>
             </div>
         </section>`
-});
+};

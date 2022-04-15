@@ -1,4 +1,4 @@
-Vue.component('site-footer', {
+const site_footer = {
     template: `
     <footer class="page-footer wrapper">
         <p class="page-footer-txt">&copy; 2021 Brand All Rights Reserved.</p>
@@ -29,4 +29,4 @@ Vue.component('site-footer', {
             </a>
         </div>
     </footer>`
-});
+};
