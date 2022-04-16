@@ -45,7 +45,7 @@ const app = new Vue({
                     this.error = true;
                 })
         },
-        deleteJson(url, data) {
+        delJson(url, data) {
             return fetch(url, {
                 method: "DELETE",
                 headers: {
@@ -56,6 +56,7 @@ const app = new Vue({
                 .then(result => result.json)
                 .catch(error => {
                     console.log(error);
+                    this.error = true;
                 })
         }
     }

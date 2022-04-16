@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const router = express.Router();
+const logHandler = require('./logHandler');
 const handler = require('./handler');
 
 router.get('/', (req, res) => {
@@ -12,13 +13,16 @@ router.get('/', (req, res) => {
         }
     })
 });
-router.post('/', (req, res) => {
+router.post('/:id/:name', (req, res) => {
     handler(req, res, 'add', 'server/db/userCart.json');
+    logHandler(req, res, 'add', `server/db/stats.json`);
 });
-router.put('/:id', (req, res) => {
+router.put('/:id/:name', (req, res) => {
     handler(req, res, 'change', 'server/db/userCart.json');
+    logHandler(req, res, 'change', `server/db/stats.json`);
 });
-router.delete('/:id', (req, res) => {
-    handler(req, res, 'remove', 'server/db/userCart.json')
+router.delete('/:id/:name', (req, res) => {
+    handler(req, res, 'remove', 'server/db/userCart.json');
+    logHandler(req, res, 'remove', `server/db/stats.json`);
 })
 module.exports = router;

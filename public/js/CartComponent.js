@@ -1,8 +1,8 @@
 const cartItem = {
-    props: ['cartItem', 'img'],
+    props: ['cartItem'],
     template: `
             <li class="catalog__header-basket-products-item">
-                <img class="catalog__header-basket-products-item-photo" :src="img"
+                <img class="catalog__header-basket-products-item-photo" :src="cartItem.image"
                     alt="item photo">
                 <div class="catalog__header-basket-products-item-wrp">
                     <span
@@ -15,7 +15,7 @@ const cartItem = {
                     <span class="catalog__header-basket-products-item-title">{{ cartItem.price }}
                         $</span>
                     <button class="catalog__header-basket-products-item-btn"
-                        @click="$root.$refs.cart.removeProduct(cartItem)"> <span>&times;</span>
+                        @click="$parent.removeProduct(cartItem)"> <span>&times;</span>
                     </button>
                 </div>
             </li>
@@ -27,7 +27,6 @@ const cart = {
     data() {
         return {
             cartItems: [],
-            imgCart: '/img/index_products_img_1.jpg',
             showCart: false
         }
     },
@@ -51,19 +50,19 @@ const cart = {
         },
 
         addProduct(product) {
-            let item = this.cartItems.find(item => item.id_product === product.id_product);
+            let item = this.cartItems.find(el => el.id_product === product.id_product);
             if (item) {
-                this.$parent.putJson(`/api/cart/${item.id_product}`, { quantity: 1 })
+                this.$parent.putJson(`/api/cart/${product.id_product}/${product.product_name}`, { quantity: 1 })
                     .then(data => {
-                        if (data.result === 1) {
+                        if (data.result) {
                             item.quantity++
                         }
                     })
             } else {
                 const itemCart = Object.assign({ quantity: 1 }, product);
-                this.$parent.postJson('/api/cart', itemCart)
+                this.$parent.postJson(`/api/cart/${product.id_product}/${product.product_name}`, itemCart)
                     .then(data => {
-                        if (data.result === 1) {
+                        if (data.result) {
                             this.cartItems.push(itemCart)
                         }
                     })
@@ -71,16 +70,20 @@ const cart = {
         },
 
         removeProduct(product) {
-            let item = this.cartItems.find(item => item.id_product === product.id_product);
-            if (item) {
-                this.$parent.deleteJson(`/api/cart/${item.id_product}`, { quantity: 1 })
+            if (product.quantity > 1) {
+                this.$parent.putJson(`/api/cart/${product.id_product}/${product.product_name}`, { quantity: -1 })
                     .then(data => {
-                        if (data) {
-                            if (data.result === 1) {
-                                item.quantity--
-                            } else {
-                                this.cartItems.splice(this.cartItems.indexOf(product), 1);
-                            }
+                        if (data.result) {
+                            product.quantity--;
+                        }
+                    })
+            } else {
+                this.$parent.delJson(`/api/cart/${product.id_product}/${product.product_name}`, product)
+                    .then(data => {
+                        if (data.result) {
+                            this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                        } else {
+                            console.log('Error - delete of product');
                         }
                     })
             }
@@ -95,7 +98,6 @@ const cart = {
                 <cart-item 
                 v-for="item of cartItems" 
                 :key="item.id_product" 
-                :img="imgCart" 
                 :cart-item="item">
                 </cart-item>                       
             </ul>
