@@ -46,14 +46,11 @@ const products = {
         }
     },
     template: `
-        <section class="products">
-            <span class="products-title">Fetured Items</span>
-            <p class="products-txt">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
-            <product 
-            v-for="product of filtered" 
-            :key="product.id_product"
-            :product="product"></product>
-            <a class="products-btn" href="catalog.html">Browse All Product</a>
-        </section>
+            <div class="products-wrp">
+                <product 
+                v-for="product of filtered" 
+                :key="product.id_product"
+                :product="product"></product>
+            </div>
         `
 };
