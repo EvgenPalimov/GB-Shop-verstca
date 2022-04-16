@@ -18,7 +18,7 @@ let handler = (req, res, action, file) => {
             fs.writeFile(file, newCart, (err) => {
                 if (err) {
                     console.log('handler-write-error')
-                    res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
+                    res.send(JSON.stringify({ result: 0, text: err }));
                 } else {
                     console.log('handler-write-send')
                     res.send(JSON.stringify({ result: 1, text: 'SUCCESS' }));
