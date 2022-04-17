@@ -53,8 +53,8 @@ const cart = {
             let item = this.cartItems.find(el => el.id_product === product.id_product);
             if (item) {
                 this.$parent.putJson(`/api/cart/${product.id_product}/${product.product_name}`, { quantity: 1 })
-                    .then(data => {
-                        if (data.result) {
+                    .then(status => {
+                        if (status == 200) {
                             item.quantity++
                         }
                     })

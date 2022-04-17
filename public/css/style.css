@@ -1236,6 +1236,10 @@ nav[role="navigation"] {
 /* Страница Product */
 /* Product */
 
+.page-cart-product {
+    margin-bottom: 70px
+} 
+
 .cart-product {
     display: flex;
     flex-direction: column;
