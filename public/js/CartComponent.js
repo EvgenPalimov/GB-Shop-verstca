@@ -43,6 +43,7 @@ const cart = {
     methods: {
         countProducts() {
             if (this.cartItems) {
+                this.$parent.countProductsOfCart = 0;
                 for (item of this.cartItems) {
                     this.$parent.countProductsOfCart += item.quantity
                 }
@@ -53,9 +54,9 @@ const cart = {
             let item = this.cartItems.find(el => el.id_product === product.id_product);
             if (item) {
                 this.$parent.putJson(`/api/cart/${product.id_product}/${product.product_name}`, { quantity: 1 })
-                    .then(status => {
-                        if (status == 200) {
-                            item.quantity++
+                    .then(data => {
+                        if (data.result) {
+                            item.quantity++;
                         }
                     })
             } else {
@@ -67,6 +68,7 @@ const cart = {
                         }
                     })
             }
+            this.countProducts()
         },
 
         removeProduct(product) {
@@ -87,6 +89,7 @@ const cart = {
                         }
                     })
             }
+            this.countProducts()
         }
     },
     template: `

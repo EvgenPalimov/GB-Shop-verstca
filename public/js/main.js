@@ -39,7 +39,7 @@ const app = new Vue({
                 },
                 body: JSON.stringify(data)
             })
-                .then(result => result.json)
+                .then(result => result.json())
                 .catch(error => {
                     console.log(error);
                     this.error = true;
@@ -53,7 +53,7 @@ const app = new Vue({
                 },
                 body: JSON.stringify(data)
             })
-                .then(result => result.json)
+                .then(result => result.json())
                 .catch(error => {
                     console.log(error);
                     this.error = true;
