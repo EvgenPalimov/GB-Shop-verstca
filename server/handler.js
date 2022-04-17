@@ -1,5 +1,6 @@
 const cart = require('./cart');
 const fs = require('fs');
+const { status } = require('express/lib/response');
 
 const actions = {
     add: cart.add,
@@ -17,7 +18,7 @@ let handler = (req, res, action, file) => {
                 if (err) {
                     res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
                 } else {
-                    res.send(JSON.stringify({ result: 1 }))
+                    res.send(JSON.stringify({ result: 1, text: 'SUCCESS' }));
                 }
             })
         }

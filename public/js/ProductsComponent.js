@@ -1,9 +1,9 @@
 const product = {
-    props: ['product', 'img'],
+    props: ['product'],
     template: `      
         <article class="products-item">
             <div class="products-item-photo-wrp">
-                <img class="products-item-photo"  :src="img"
+                <img class="products-item-photo"  :src="product.image"
                     alt="product description" height="420">
             </div>
             <div class="products-item-txt-wrp">
@@ -27,8 +27,7 @@ const products = {
         return {
             catalogUrl: '/catalogData.json',
             products: [],
-            filtered: [],
-            imgCatalog: '/img/index_products_img_1.jpg'
+            filtered: []
         }
     },
     mounted() {
@@ -47,15 +46,11 @@ const products = {
         }
     },
     template: `
-        <section class="products">
-            <span class="products-title">Fetured Items</span>
-            <p class="products-txt">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
-            <product 
-            v-for="product of filtered" 
-            :key="product.id_product"
-            :img="imgCatalog"
-            :product="product"></product>
-            <a class="products-btn" href="catalog.html">Browse All Product</a>
-        </section>
+            <div class="products-wrp">
+                <product 
+                v-for="product of filtered" 
+                :key="product.id_product"
+                :product="product"></product>
+            </div>
         `
 };

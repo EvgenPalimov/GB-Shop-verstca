@@ -9,12 +9,9 @@ let change = (cart, req) => {
 };
 
 let remove = (cart, req) => {
-    let item = cart.contents.find(el => el.id_product === +req.params.id);
-    if (item.quantity > 1) {
-        item.quantity--;
-    } else {
-        cart.contents.splice(cart.contents.indexOf(req.params.id), 1);
-    }
+    let find = cart.contents.find(el => +el.id_product === req.body.id_product);
+    let cartContent = cart.contents;
+    cartContent.splice(cartContent.indexOf(find), 1);
     return JSON.stringify(cart, null, 4);
 };
 
